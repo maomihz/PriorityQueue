@@ -30,8 +30,9 @@ int main() {
         temparr[i] = rand() % 1000 + 1;
     }
 
+    cout << queue.describe() << endl;
     cout << "*******************" << endl;
-
+    
     printf("%10s %10s %10s %10s\n", "Data Size", "Insert", "Remove", "Total");
     for (int size = 1000; size <= CAP; size += 100) {
         gettimeofday(&tvalBefore,NULL);
@@ -53,7 +54,6 @@ int main() {
             timediff(tvalAfter, tvalBefore))
             ;
     }
-    cout << queue.describe() << endl;
 
 
 }
